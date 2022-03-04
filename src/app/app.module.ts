@@ -6,17 +6,24 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProductosComponent } from './productos/productos.component';
 import { DeseosComponent } from './deseos/deseos.component';
+import { CardComponent } from './card/card.component';
+import { HttpClientModule } from '@angular/common/http';
+import { NoImagePipe } from './pipes/no-image.pipe';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     ProductosComponent,
-    DeseosComponent
+    DeseosComponent,
+    CardComponent,
+    NoImagePipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
