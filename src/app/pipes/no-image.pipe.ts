@@ -1,0 +1,15 @@
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({
+  name: 'noImage'
+})
+export class NoImagePipe implements PipeTransform {
+
+  transform(image: any): unknown {
+    if(!image){
+      return 'assets/img.png';
+    }
+    return image;
+  }
+
+}
