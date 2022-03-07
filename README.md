@@ -1,9 +1,11 @@
-# WishListApp
+# Wish-List-App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
+Este proyecto fue contruido en [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
+Tiene como funcionalidad listar unos pruductos y agregarlos a una lista de deseos donde posteriormente le podrá colocar una breve descripción o eliminar
 
-# WishListApp
-En [deseo.service](.src/app/services/deseos.service.ts) y  [producto.service](.src/app/services/productos.service.ts) ajuste `private url = 'http://localhost:3001/productos';` cambiando el domimio o el puerto
+# Conexion API
+En [deseo.service](.src/app/services/deseos.service.ts) y  [producto.service](.src/app/services/productos.service.ts) ajuste `private url = 'http://localhost:3001/productos';` cambiando el domimio o el puerto de la sieguiente [API](https://github.com/JnGzn/wish-list-service) que previamente debió ser descargada y desplegada.
+
 
 ## Development server
 
