@@ -2,6 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 
+# WishListApp
+En [deseo.service](.src/app/services/deseos.service.ts) y  [producto.service](.src/app/services/productos.service.ts) ajuste `private url = 'http://localhost:3001/productos';` cambiando el domimio o el puerto
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
