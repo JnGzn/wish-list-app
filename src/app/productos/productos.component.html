@@ -3,7 +3,7 @@
     <div class="col" *ngFor="let producto of productos">
         <div class="card">
 
-            <img [src]="producto.imagen | noImage" class="card-img-top" [alt]="producto.nombre">
+            <iframe [src]="producto.imagen | noImage " frameborder="0" allowtransparency="true" allow="encrypted-media" ></iframe>
             <div class="card-body">
                 <h5 class="card-title">{{ producto.nombre }}</h5>
                 <p class="card-text">{{ producto.descripcion }}</p>
@@ -12,10 +12,8 @@
                 <!-- <p class="card-text"><small class="text-muted">{{ producto }}</small></p> -->
                 <!-- </div> -->
                 <button (click)="agregarLista(producto)" type="button" class="btn btn-outline-primary btn-block">Agregar a Mis Deseos</button>
-                <!-- <a [routerLink]="['/producto']" href="" class="btn btn-outline-primary btn-block">Ver mas link</a> -->
 
             </div>
     </div>
 </div>
   
-

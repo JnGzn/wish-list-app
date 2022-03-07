@@ -21,4 +21,7 @@ export class DeseosService {
   modificarDeseos(deseo: any): Observable<Deseo>{
     return this.http.put<Deseo>(this.url,deseo).pipe(map((data: any) => data.data))
   }
+  agregarDeseo(deseo: any){
+    return this.http.post<Deseo>(this.url,deseo).pipe(map((data: any) => data.data))
+  }
 }

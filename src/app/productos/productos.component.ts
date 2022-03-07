@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Producto } from '../interfaces/producto';
 import { ProductosService } from '../services/productos.service';
 import Swal from 'sweetalert2'
+import { DeseosService } from '../services/deseos.service';
 
 @Component({
   selector: 'app-productos',
@@ -11,7 +12,7 @@ import Swal from 'sweetalert2'
 export class ProductosComponent implements OnInit {
 
   public productos: Producto[] = []
-  constructor( private productoService: ProductosService) { 
+  constructor( private productoService: ProductosService, private deseoService: DeseosService) { 
     // productoService = new ProductosService()
   }
 
@@ -23,15 +24,16 @@ export class ProductosComponent implements OnInit {
   }
 
   async agregarLista(producto: Producto){
-    console.log(producto);
-    Swal.fire({
-      title: 'Por favor confirme'
+    const descripcion = ''
+  
+    this.deseoService.agregarDeseo({
+      idProducto: producto.id,
+      idCliente:'1',
+      descripcion
+    }).subscribe(data => {
+      console.log(data);
     })
-    const val = await Swal.getInput()
     
-    if (val) {
-      Swal.fire(`Entered password: ${val}`)
-    }
   }
 
 }

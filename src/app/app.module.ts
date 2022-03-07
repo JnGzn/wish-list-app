@@ -10,6 +10,7 @@ import { CardComponent } from './card/card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NoImagePipe } from './pipes/no-image.pipe';
 import { FormsModule } from '@angular/forms';
+import { DomSeguroPipe } from './pipes/dom-seguro.pipe';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     ProductosComponent,
     DeseosComponent,
     CardComponent,
-    NoImagePipe
+    NoImagePipe,
+    DomSeguroPipe
   ],
   imports: [
     BrowserModule,
